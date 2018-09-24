@@ -17,7 +17,7 @@ print("")
 while current_n != 1:
   if current_n % 2 == 0:
     current_n = current_n / 2
-    # adds one to the even count for a particular index
+    # adds one to the even count for the current index
     even_between_odd[index] += 1
   else:
     current_n = (3 * current_n) + 1
@@ -43,4 +43,5 @@ print("Highest number reached: " + str(highest_number_reached))
 print("Times above n: "  + str(times_above_n))
 print("Odd count: " + str(odd_count))
 print("Even values between odd numbers: " + str(even_between_odd))
+print("No. of y-sets traversed: " + str(len(even_between_odd)))
 ```
