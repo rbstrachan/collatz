@@ -5,9 +5,10 @@ An attempt at writing a Collatz sequence generator in Python.
 current_n = int(input("Enter a starting value: "))
 original_n = current_n
 iterations = 0
-highest_number_reached = 0
+highest_number_reached = original_n
 times_above_n = 0
 odd_count = 0
+longest_even_run = 0
 # number of even numbers between each odd instance
 even_between_odd = [0]
 index = 0
@@ -38,10 +39,16 @@ while current_n != 1:
 if even_between_odd[0] == 0:
   del even_between_odd[0]
 
-print("\nStopping time: " + str(iterations))
-print("Highest number reached: " + str(highest_number_reached))
-print("Times above n: "  + str(times_above_n))
-print("Odd count: " + str(odd_count))
-print("Even values between odd numbers: " + str(even_between_odd))
-print("No. of y-sets traversed: " + str(len(even_between_odd)))
+for run in even_between_odd:
+  if run > longest_even_run:
+    longest_even_run = run
+
+print("\nStarting number:..............  " + str(original_n))
+print("Highest number reached:.......  " + str(highest_number_reached))
+print("Number of Iterations:.........  " + str(iterations))
+print("Number of times higher than n:  "  + str(times_above_n))
+print("Odd number count:.............  " + str(odd_count))
+print("Longest even-number run:......  " + str(longest_even_run))
+print("\nLength of even runs: ")
+print(str(even_between_odd))
 ```
