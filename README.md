@@ -1,5 +1,5 @@
 # Collatz Conjecture Sequence Generator
-An attempt at writing a Collatz sequence generator in Python.
+My attempt at writing a Collatz sequence generator in Python.
 
 ```python
 current_n = int(input("Enter a starting value: "))
